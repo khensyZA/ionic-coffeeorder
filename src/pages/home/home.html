@@ -1,14 +1,19 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="brown">
     <ion-title>
-      Ionic Blank
+      COFFEE EXPRESS
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content padding class="order">
+  <br>
+<h1>COFFEE TIME!</h1>
+<br>
+<img src= './assets/imgs/cup.jpg'> 
+<br>
+<p>Work wouldn't be possible without Coffee</p>
+<ion-fab bottom right>
+<button ion-fab  color="brown" (click)="presentPrompt()"><ion-icon name="cafe"></ion-icon></button>
+</ion-fab>
 </ion-content>

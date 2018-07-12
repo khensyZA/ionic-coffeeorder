@@ -1,0 +1,61 @@
+<!--
+  Generated template for the OrderPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>order</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class ="top">
+    <h1 text-center>{{User}}: Grab A Coffee!</h1>
+    <ion-row>
+    <ion-item text-center no-lines>
+     <p>cup(s):{{quantity}} </p>
+    <button ion-button full color="brown" (click)="order(+1)" >+</button>
+    </ion-item>
+    </ion-row>
+
+    <button ion-button full color="brown" (click)="clear()" >Clear</button>
+
+    <h1 text-center >Add Coffee Toppings</h1>
+    <ion-list no-lines>
+
+        <ion-item>
+          <ion-label>Whipped Cream</ion-label>
+          <ion-checkbox [(ngModel)]=Cream  color="brown" ></ion-checkbox>
+        </ion-item>
+    
+      <ion-item>
+          <ion-label>Chocolate Syrup</ion-label>
+          <ion-checkbox  [(ngModel)]=Syrup  color="brown"></ion-checkbox>
+        </ion-item>
+
+      <ion-item>
+          <ion-label>Milk Foam</ion-label>
+          <ion-checkbox  [(ngModel)]=Foam color="brown" ></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+            <ion-label >No Topping</ion-label>
+            <ion-checkbox  [(ngModel)]=Topping color="lighter" ></ion-checkbox>
+          </ion-item>
+
+      </ion-list>
+
+  <button ion-button full color="brown" (click)="submit()" >Submit Order</button>
+
+   <h5>Ordered Topping:</h5>
+  <h5>Quantity:{{quantity}}</h5>
+  <h2>Total:{{Total}} </h2>
+
+
+
+
+</ion-content>
